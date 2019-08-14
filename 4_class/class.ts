@@ -11,6 +11,9 @@ class Animal {
 }
 
 class Snake extends Animal {
+    private age: number
+    public weight: number
+
     constructor(name: string) {
         super(name)
     }
@@ -22,7 +25,7 @@ class Snake extends Animal {
 }
 
 class Horse extends Animal {
-    constructor(name: string) {
+    constructor(readonly name: string) {
         super(name)
     }
 
