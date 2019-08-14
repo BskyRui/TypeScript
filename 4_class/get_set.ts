@@ -2,6 +2,7 @@ const token = 'sec';
 
 class Employee {
     private _fullName: string
+    static type: string = "TAG"
 
     get fullName(): string {
         return this._fullName;
@@ -20,5 +21,5 @@ let empl = new Employee();
 empl.fullName = 'JOB';
 
 if (empl.fullName) {
-    console.log(empl.fullName);
+    console.log(empl.fullName, Employee.type);
 }
