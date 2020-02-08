@@ -1,15 +1,15 @@
 interface People {
-  firstName: string;
-  lastName: string;
+    firstName: string;
+    lastName: string;
 }
 
 function hello(p: People) {
-  return `Hello ${p.firstName} ${p.lastName}`;
+    return `Hello ${p.firstName} ${p.lastName}`;
 }
 
 let user: People = {
-  firstName: "Lee",
-  lastName: "R"
+    firstName: 'Lee',
+    lastName: 'R'
 };
 
 console.log(hello(user));

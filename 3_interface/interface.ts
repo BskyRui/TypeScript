@@ -1,15 +1,23 @@
+// propName
+interface Person {
+    nickname: string;
+    age?: number;
+    [propName: string]: any;
+    say(): string;
+}
+
 interface Square {
-    color: string
-    area: number
+    color: string;
+    area: number;
 }
 
 interface SquareConfig {
-    color?: string
-    width?: number
+    color?: string;
+    width?: number;
 }
 
 function createSquare(config: SquareConfig): Square {
-    let square = { color: 'black', area: 1000};
+    let square = { color: 'black', area: 1000 };
     if (config.color) {
         square.color = config.color;
     }
@@ -20,16 +28,16 @@ function createSquare(config: SquareConfig): Square {
     return square;
 }
 
-let testSquare = createSquare({color: 'gray'});
+let testSquare = createSquare({ color: 'gray' });
 
 // readonly
 interface Point {
-    readonly x: number
-    readonly y: number
+    readonly x: number;
+    readonly y: number;
 }
 
-let pos: Point = { 
-    x: 10, 
+let pos: Point = {
+    x: 10,
     y: 20
 };
 // pos.x = 20
@@ -37,16 +45,16 @@ console.log(pos);
 
 // 函数类型
 interface SearchFunction {
-    (source: string, subString: string): boolean
+    (source: string, subString: string): boolean;
 }
 let search: SearchFunction = function(src, sub) {
     let res = src.search(sub);
     return res > -1;
-}
+};
 
 // 可索引的类型
 interface StringArr {
-    readonly [index: number]: string
+    readonly [index: number]: string;
 }
 
 let arr: StringArr = ['Lee', 'Job'];
