@@ -6,6 +6,15 @@ interface Person {
     say(): string;
 }
 
+// 函数类型
+interface sayHi {
+    (word: string): string;
+}
+
+const f: sayHi = (s: string): string => {
+    return s;
+};
+
 interface Square {
     color: string;
     area: number;
