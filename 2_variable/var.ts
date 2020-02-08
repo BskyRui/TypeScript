@@ -1,22 +1,24 @@
+// 双引号替换单引号 Prettier插件 -> prettier.singleQuote
+
 // var
 // let 块级作用域
 for (let i = 0; i < 10; i++) {
-    setTimeout(function() {
-        console.log(i);
-    }, i * 100);
+  setTimeout(function() {
+    console.log(i);
+  }, i * 100);
 }
 
 // const 常量
 const h = 'ssss';
-// h = 'aaaa';  
+// h = 'aaaa';
 
 // 解构 展开
 let ipt: [number, number] = [0, 1];
 function f([first, second]: [number, number]) {
-    console.log(first, second);
+  console.log(first, second);
 }
 
-f(ipt)
+f(ipt);
 
 let [fir, ...other] = [1, 2, 3, 4];
 // 1 [ 2, 3, 4 ]
@@ -24,10 +26,10 @@ console.log(fir, other);
 
 // 对象解构
 // e({ a, b }?: { a: string; b?: number; }): void
-function e({a, b = 0} = {a: ''}): void {
-
+function e({ a, b = 0 } = { a: '' }): void {
+  console.log(`a, b: ${a}, ${b}`);
 }
-e({a: 'yes'});
+e({ a: 'yes' });
 e();
 
 // 数组展开
@@ -37,13 +39,32 @@ console.log([...arr, ...otherArr]);
 
 // 对象展开
 let info = {
-    name: 'lr',
-    age: 22,
-    height: 172,
+  name: 'lr',
+  age: 22,
+  height: 172
 };
 
 let newInfo = {
-    ...info,
-    name:  'LR'
+  ...info,
+  name: 'LR'
 };
 console.log(newInfo);
+
+// 类型别名
+type User = {
+  name: string;
+  age: number;
+};
+
+class Teacher {
+  name: string;
+  age: number;
+}
+
+// User[]
+const objArr: Teacher[] = [
+  {
+    name: 'lr',
+    age: 22
+  }
+];
