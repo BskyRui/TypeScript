@@ -2,7 +2,7 @@
 // tsc say.ts
 
 function say(s: string) {
-    console.log(`hello ${s}`);
+  console.log(`hello ${s}`);
 }
 
-say('world');
+say("world");
