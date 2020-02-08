@@ -46,3 +46,16 @@ function addF({ first, second }: { first: number; second: number }): number {
 }
 
 console.log(addF({ first: 11, second: 2 }));
+
+// (str: string) => number is function Type
+const func: (str: string) => number = str => {
+  return parseInt(str, 10);
+};
+
+// 其他
+interface Person {
+  name: "string";
+}
+
+const p = '{ name: "lr" }';
+const json: Person = JSON.parse(p);
