@@ -1,8 +1,8 @@
 const token = 'sec';
 
 class Employee {
-    private _fullName: string
-    static type: string = "TAG"
+    private _fullName: string;
+    static type: string = 'TAG';
 
     get fullName(): string {
         return this._fullName;
