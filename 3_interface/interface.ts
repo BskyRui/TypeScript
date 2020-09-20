@@ -1,3 +1,5 @@
+// 在面向对象编程中，接口是一种规范的定义
+
 // propName
 interface Person {
     nickname: string;
